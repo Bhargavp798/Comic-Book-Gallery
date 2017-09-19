@@ -8,9 +8,12 @@ namespace ComicBookDetails.Controllers
 {
     public class ComicGalleryController:Controller
     {
-        public string Detail()
+        public ContentResult Detail()
         {
-            return "Hello MVC Project!";
+            return new ContentResult()
+            {
+                Content = "Hello Mvc Project"
+            };
         }
     }
 }
