@@ -1,9 +1,8 @@
 ﻿
 @{
-    Layout = null;
     ViewBag.Title = "Detail";
 
-    var Name = "Comic Book Details";
+    var Name = "Half Girlfriend";
     var bookPrice = 700;
     var bookDescription = "<p>Chetan Bhagat published his first novel first novel 'Five Point Someone' in 2004 and this very first venture took him to the peaks of fame and popularity. The book depicted the story of an IIT student who considers himself to be below average than all the other students in IIT.</p>";
     var Authors = new string[]
@@ -27,7 +26,11 @@
         <h3>Book Price: @bookPrice</h3>
         <h3>Book Description:</h3>
         <div>@Html.Raw(bookDescription)</div>
+
+       @if(Authors.Length>0)
+        {
         <h5>Authors:</h5>
+
         <div>
             <ul>
                 @foreach (var Artists in Authors)
@@ -36,6 +39,8 @@
                 }
             </ul>
         </div>
+        }
+
 
     </div>
 </body>
